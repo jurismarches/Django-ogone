@@ -104,12 +104,6 @@ class Ogone(object):
         return dict([(k.upper(), v) for k, v in params.items()])
 
     @staticmethod
-    def _parse_orderid(params):
-        params.update({'ORDERID': int(params.get('ORDERID'))})
-
-        return params
-
-    @staticmethod
     def _parse_status(params):
         params.update({'STATUS': int(params.get('STATUS'))})
 
@@ -173,7 +167,6 @@ class Ogone(object):
         self._parse_trxdate(self.parsed_params)
         self._parse_ed(self.parsed_params)
         self._parse_status(self.parsed_params)
-        self._parse_orderid(self.parsed_params)
 
         # Mark ourselves as parsed
         self.parsed = True
