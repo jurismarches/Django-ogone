@@ -8,9 +8,9 @@ try:
 except:
     README = None
 
-try: 
-    LICENSE = open('LICENSE.txt').read() 
-except: 
+try:
+    LICENSE = open('LICENSE.txt').read()
+except:
     LICENSE = None
 
 
@@ -24,7 +24,7 @@ setup(
     license = LICENSE,
     url = 'http://github.com/tschellenbach/Django-ogone',
     packages = find_packages(),
-    data_files=('',['README.md', 'LICENSE.txt']),
+    data_files=(['README.md', 'LICENSE.txt']),
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
